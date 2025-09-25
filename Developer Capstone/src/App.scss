@@ -1,0 +1,91 @@
+@import "bootstrap/scss/bootstrap";
+@import "bootstrap/scss/mixins";
+@import "variables";
+
+#root {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+header {
+  background-color: #fff;
+}
+
+.header-container {
+  max-width: 1200px;
+  padding: 1.5rem 2rem;
+}
+
+.first-section-container {
+  background-color: #495f56;
+}
+
+.first-section {
+  max-width: 1200px;
+}
+
+.first-section .image-container {
+  width: 300px;
+  height: 300px;
+}
+
+.first-section img {
+  width: 100%;
+}
+
+.navbar-expand-lg {
+  .navbar-nav {
+    .nav-link {
+      margin-left: 20px !important;
+      font-size: 1.2rem !important;
+      --bs-nav-link-color: $color-black;
+      border-bottom: 2px solid transparent;
+
+      &:hover {
+        border-bottom: 2px solid $color-yellow;
+      }
+    }
+  }
+}
+
+.second-section-head {
+  max-width: 1200px;
+}
+
+@include media-breakpoint-down(lg) {
+  .navbar-expand-lg {
+    .navbar-collapse {
+      position: absolute;
+      flex-direction: column;
+      list-style: none;
+      top: 100%;
+      right: .1rem;
+      background-color: white;
+      border-radius: 12px;
+      color: #333;
+      padding: 1rem;
+      margin: 0;
+      z-index: 10;
+    }
+  }
+}
