@@ -1,0 +1,9 @@
+@use "sass:math";
+
+// Backup the original _assert-ascending function
+@function _assert-ascending-patched($prev-num, $num) {
+  @if $prev-num == null or math.unit($num) == "%" or math.unit($prev-num) == "%" {
+    @return true;
+  }
+  @return false; // original logic
+}

@@ -1,0 +1,11 @@
+.specials-card-image {
+  max-width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.specials-container {
+  .card-text {
+    letter-spacing: 0 !important;
+  }
+}

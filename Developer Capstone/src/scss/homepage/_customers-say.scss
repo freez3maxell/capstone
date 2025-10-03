@@ -1,0 +1,23 @@
+.customers-section {
+  background-color: $color-light-yellow;
+  @extend .full-width;
+
+  .card {
+    border-radius: 20px;
+  }
+
+  h2 {
+    font-weight: 700;
+    font-size: 3rem;
+  }
+
+  img {
+    width: 48px;
+    height:48px;
+    object-fit: contain;
+  }
+
+  .card-title {
+    font-weight: 700;
+  }
+}

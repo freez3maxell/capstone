@@ -1,0 +1,43 @@
+.chicago-section-container {
+  background-color: $color-dark-grey;
+
+  @extend .full-width;
+}
+
+.chicago-section {
+  padding-bottom: 5rem;
+  padding-top: 4rem;
+  color: $color-white;
+
+  h1 {
+    color: $color-yellow;
+    line-height: 1;
+    margin: 0;
+  }
+
+  h2 {
+    margin-bottom: 2rem;
+  }
+
+  .image-container {
+    height: 300px;
+  }
+
+  @include media-breakpoint-up(md) {
+    article {
+      width: 50%;
+    }
+  }
+
+  img {
+    width: 100%;
+    border-radius: 25px;
+    max-height: 500px;
+    object-fit: contain;
+  }
+
+  p {
+    font-size: 1.6rem;
+    margin-bottom: 2.5rem;
+  }
+}

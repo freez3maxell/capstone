@@ -1,0 +1,13 @@
+.call-to-action-section {
+  margin-top: 2rem;
+
+  button {
+    max-width: 220px;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .call-to-action-section {
+    margin-top: 6rem;
+  }
+}

@@ -1,0 +1,72 @@
+#root {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+body {
+  font-family: 'Karla', sans-serif;
+  color: $color-onyx;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  place-items: baseline;
+}
+
+h1, h2, h3,
+h4, h5, h6,
+.nav-link {
+  font-family: 'Markazi Text', serif;
+  font-weight: 700;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+h1 {
+  font-size: 4.5rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+button {
+  color: $color-onyx;
+  background-color: $color-yellow;
+  border: 2px solid $color-onyx;
+  border-radius: 15px;
+  font-size: 1.6rem;
+  padding: .4em .8em;
+  font-weight: 700;
+  max-width: 250px;
+
+  &:hover {
+    background-color: darken($color-yellow, 10%);
+  }
+
+  &:active, &:focus {
+    background-color: $color-yellow;
+  }
+}
+
+.full-width {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
