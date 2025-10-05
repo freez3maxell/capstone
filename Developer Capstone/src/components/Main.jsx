@@ -1,27 +1,25 @@
+import { Routes, Route } from 'react-router-dom';
+import Homepage from './Homepage.jsx';
+import BookingPage from './BookingPage.jsx';
+import About from './About.jsx';
+import Menu from './Menu.jsx';
+import Reservations from './Reservations.jsx';
+import OrderOnline from './OrderOnline.jsx';
+import Login from './Login.jsx';
+
 export default function Main() {
-    return (
-        <main>
-            <div className="first-section-container container">
-                <section className="first-section text-start d-flex justify-content-between m-auto">
-                    <div>
-                        <h1>Little Lemon</h1>
-                        <h2>Chicago</h2>
-                        <p>We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
-                        <button>Reserve a Table</button>
-                    </div>
-                    <div className="image-container">
-                        <img className="obj" src="/assets/restauranfood.jpg" alt="restaurant food" />
-                    </div>
-                </section>
-            </div>
-
-            <section className="second-section">
-
-
-                <div>
-
-                </div>
-            </section>
-        </main>
-    );
+  return (
+    <main>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/menu" element={<Menu />} />
+        <Route path="/reservations" element={<Reservations />} />
+        <Route path="/order-online" element={<OrderOnline />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/booking" element={<BookingPage />} />
+      </Routes>
+    </main>
+  );
 }
+

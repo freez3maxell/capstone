@@ -37,9 +37,12 @@ h3 {
 
 a {
   text-decoration: none;
-  color: #333;
-  font-size: 1.7rem;
-  font-weight: 700;
+  color: $color-onyx;
+  font-size: 1.2rem;
+
+  &:hover {
+    color: $color-yellow;
+  }
 }
 
 button {

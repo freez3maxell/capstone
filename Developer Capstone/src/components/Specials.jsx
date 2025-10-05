@@ -5,7 +5,7 @@ export default function Specials() {
   return (
       <section className="container specials-container py-4 mb-lg-5 px-0">
         <div className="row g-4">
-          <div className="col-12 col-lg-4">
+          <div className="col-12 col-md-6 col-lg-4">
             <div className="card h-100 shadow rounded-4 border-2">
               <img src="/assets/greek salad.jpg" className="specials-card-image card-img-top rounded-top-4" alt="Greek Salad" />
               <div className="card-body d-flex flex-column justify-content-between">
@@ -26,7 +26,7 @@ export default function Specials() {
             </div>
           </div>
 
-          <div className="col-12 col-lg-4">
+          <div className="col-12 col-md-6 col-lg-4">
             <div className="card h-100 shadow rounded-4 border-2">
               <img src="/assets/bruchetta.svg" className="specials-card-image card-img-top rounded-top-4" alt="Bruchetta" />
               <div className="card-body d-flex flex-column justify-content-between">
@@ -47,7 +47,7 @@ export default function Specials() {
             </div>
           </div>
 
-          <div className="col-12 col-lg-4">
+          <div className="col-12 col-md-6 col-lg-4">
             <div className="card h-100 shadow rounded-4 border-2">
               <img src="/assets/lemon dessert.jpg" className="specials-card-image card-img-top rounded-top-4" alt="Lemon Dessert" />
               <div className="card-body d-flex flex-column justify-content-between">

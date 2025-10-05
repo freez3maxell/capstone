@@ -22,13 +22,13 @@ export default function Nav() {
                         <Link className="nav-link" to="/" aria-current="page">Home</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" to="/about">About</Link>
+                        <Link className="nav-link" to="/about">About us</Link>
                     </li>
                     <li className="nav-item">
                         <Link className="nav-link" to="/menu">Menu</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" to="/reservations">Reservations</Link>
+                        <Link className="nav-link" to="/booking">Booking</Link>
                     </li>
                     <li className="nav-item">
                         <Link className="nav-link" to="/order-online">Order Online</Link>
