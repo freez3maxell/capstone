@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
+import React, { useReducer } from 'react';
 import Homepage from './Homepage.jsx';
 import BookingPage from './BookingPage.jsx';
 import About from './About.jsx';
@@ -6,8 +7,24 @@ import Menu from './Menu.jsx';
 import Reservations from './Reservations.jsx';
 import OrderOnline from './OrderOnline.jsx';
 import Login from './Login.jsx';
+import { fetchAPI } from '../utilities/api.js';
+
+const initializeTimes = () => {
+  const today = new Date();
+  return fetchAPI(today);
+};
+
+const updateTimes = (state, action) => {
+  if (action.type === 'UPDATE_TIMES' && action.date) {
+    const dateObj = typeof action.date === 'string' ? new Date(action.date) : action.date;
+    return fetchAPI(dateObj);
+  }
+  return state;
+};
 
 export default function Main() {
+  const [availableTimes, dispatch] = useReducer(updateTimes, [], initializeTimes);
+
   return (
     <main>
       <Routes>
@@ -17,9 +34,8 @@ export default function Main() {
         <Route path="/reservations" element={<Reservations />} />
         <Route path="/order-online" element={<OrderOnline />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/booking" element={<BookingPage />} />
+        <Route path="/booking" element={<BookingPage availableTimes={availableTimes} dispatch={dispatch} />} />
       </Routes>
     </main>
   );
 }
-

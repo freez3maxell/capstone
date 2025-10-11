@@ -51,12 +51,12 @@ button {
   border: 2px solid $color-onyx;
   border-radius: 15px;
   font-size: 1.6rem;
-  padding: .4em .8em;
+  padding: .2em .6em;
   font-weight: 700;
   max-width: 250px;
 
   &:hover {
-    background-color: darken($color-yellow, 10%);
+    background-color: darken($color-yellow, 5%);
   }
 
   &:active, &:focus {
