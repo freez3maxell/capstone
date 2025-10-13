@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useNavigate } from 'react-router-dom';
 import React, { useReducer } from 'react';
 import Homepage from './Homepage.jsx';
 import BookingPage from './BookingPage.jsx';
@@ -7,7 +7,8 @@ import Menu from './Menu.jsx';
 import Reservations from './Reservations.jsx';
 import OrderOnline from './OrderOnline.jsx';
 import Login from './Login.jsx';
-import { fetchAPI } from '../utilities/api.js';
+import ConfirmedBooking from './ConfirmedBooking.jsx';
+import { fetchAPI, submitAPI } from '../utilities/api.js';
 
 const initializeTimes = () => {
   const today = new Date();
@@ -24,6 +25,14 @@ const updateTimes = (state, action) => {
 
 export default function Main() {
   const [availableTimes, dispatch] = useReducer(updateTimes, [], initializeTimes);
+  const navigate = useNavigate();
+
+  const submitForm = async (formData) => {
+    const success = await submitAPI(formData);
+    if (success) {
+      navigate('/booking-confirmed');
+    }
+  };
 
   return (
     <main>
@@ -34,7 +43,8 @@ export default function Main() {
         <Route path="/reservations" element={<Reservations />} />
         <Route path="/order-online" element={<OrderOnline />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/booking" element={<BookingPage availableTimes={availableTimes} dispatch={dispatch} />} />
+        <Route path="/booking" element={<BookingPage availableTimes={availableTimes} dispatch={dispatch} submitForm={submitForm} />} />
+        <Route path="/booking-confirmed" element={<ConfirmedBooking />} />
       </Routes>
     </main>
   );

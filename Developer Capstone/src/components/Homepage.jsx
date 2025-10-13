@@ -5,11 +5,11 @@ import Chicago from './Chicago';
 
 export default function Homepage() {
     return (
-        <main className="homepage-main container">
+        <section className="homepage-main container">
             <Chicago/>
             <CallToAction/>
             <Specials/>
             <CustomersSay/>
-        </main>
+        </section>
     );
 }

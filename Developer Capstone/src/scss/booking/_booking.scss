@@ -1,10 +1,6 @@
 .booking-form {
   background-color: $color-light-yellow;
 
-  section {
-    min-height: 50vh;
-  }
-
   .card {
     max-width: 1100px;
   }
@@ -23,5 +19,9 @@
       background-color: $color-yellow;
       border: 2px solid $color-onyx;
     }
+  }
+
+  h2 {
+    color: $color-onyx;
   }
 }
