@@ -45,22 +45,25 @@ a {
   }
 }
 
-button {
+button,
+.btn {
   color: $color-onyx;
   background-color: $color-yellow;
   border: 2px solid $color-onyx;
   border-radius: 15px;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   padding: .2em .6em;
   font-weight: 700;
   max-width: 250px;
 
   &:hover {
     background-color: darken($color-yellow, 5%);
+    border: 2px solid $color-onyx;
   }
 
   &:active, &:focus {
-    background-color: $color-yellow;
+    background-color: $color-yellow !important;
+    border: 2px solid $color-onyx;
   }
 }
 

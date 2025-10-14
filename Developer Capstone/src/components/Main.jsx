@@ -8,30 +8,14 @@ import Reservations from './Reservations.jsx';
 import OrderOnline from './OrderOnline.jsx';
 import Login from './Login.jsx';
 import ConfirmedBooking from './ConfirmedBooking.jsx';
-import { fetchAPI, submitAPI } from '../utilities/api.js';
-
-const initializeTimes = () => {
-  const today = new Date();
-  return fetchAPI(today);
-};
-
-const updateTimes = (state, action) => {
-  if (action.type === 'UPDATE_TIMES' && action.date) {
-    const dateObj = typeof action.date === 'string' ? new Date(action.date) : action.date;
-    return fetchAPI(dateObj);
-  }
-  return state;
-};
+import { initializeTimes, updateTimes, submitFormLogic } from './AdditionalBookingLogic.jsx';
 
 export default function Main() {
   const [availableTimes, dispatch] = useReducer(updateTimes, [], initializeTimes);
   const navigate = useNavigate();
 
   const submitForm = async (formData) => {
-    const success = await submitAPI(formData);
-    if (success) {
-      navigate('/booking-confirmed');
-    }
+    await submitFormLogic(formData, navigate);
   };
 
   return (

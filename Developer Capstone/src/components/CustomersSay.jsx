@@ -31,26 +31,26 @@ const reviews = [
 
 function CustomersSay() {
   return (
-    <section className="customers-section py-5">
+    <article className="customers-section py-5" aria-label="Customer Testimonials">
       <div className="container">
         <h2 className="text-center mb-5">Our customers love us!</h2>
         <div className="row justify-content-center">
           {reviews.map((review, idx) => (
             <div className="col-lg-3 col-md-6 col-12 mb-4 d-flex" key={idx}>
-              <div className="card shadow-sm flex-fill">
+              <div className="card shadow-sm flex-fill" aria-label={`Testimonial from ${review.name}`}>
                 <div className="card-body">
                   <div className="d-flex align-items-center mb-2">
-                    <img src={review.img} alt={review.name} className="rounded-circle me-3" />
+                    <img src={review.img} alt={`Portrait of ${review.name}`} className="rounded-circle me-3" />
                     <div>
                       <h5 className="card-title mb-0">{review.name}</h5>
                       <small className="text-muted">{review.date}</small>
                     </div>
                   </div>
-                  <div className="mb-2">
+                  <div className="mb-2" aria-label={`Rating: ${review.rating} stars`}>
                     {[...Array(Math.floor(review.rating))].map((_, i) => (
-                      <i className="bi bi-star-fill text-warning" key={i}></i>
+                      <i className="bi bi-star-fill text-warning" key={i} aria-hidden="true"></i>
                     ))}
-                    {review.rating % 1 !== 0 && <i className="bi bi-star-half text-warning"></i>}
+                    {review.rating % 1 !== 0 && <i className="bi bi-star-half text-warning" aria-hidden="true"></i>}
                   </div>
                   <p className="card-text">{review.text}</p>
                 </div>
@@ -59,7 +59,7 @@ function CustomersSay() {
           ))}
         </div>
       </div>
-    </section>
+    </article>
   );
 }
 export default CustomersSay;

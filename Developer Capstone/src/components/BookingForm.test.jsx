@@ -11,7 +11,6 @@ beforeEach(() => {
 });
 afterEach(() => cleanup());
 
-// Updated reducer functions from Main.jsx
 const initializeTimes = () => {
   const today = new Date();
   return api.fetchAPI(today);

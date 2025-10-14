@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function ConfirmedBooking() {
   return (
-      <section className="booking-form d-flex align-items-center justify-content-center ">
+      <main className="booking-form d-flex align-items-center justify-content-center " aria-label="Booking Confirmation">
           <div
               className="card shadow-lg rounded-4 my-5 p-4 w-100"
           >
@@ -13,8 +13,6 @@ export default function ConfirmedBooking() {
             </h2>
             <p>Your reservation has been successfully submitted. We look forward to seeing you!</p>
         </div>
-
-    </section>
+    </main>
   );
 }
-

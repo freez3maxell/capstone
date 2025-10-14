@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Specials() {
   return (
-      <section className="container specials-container py-4 mb-lg-5 px-0">
+      <article className="container specials-container py-4 mb-lg-5 px-0" aria-label="Specials Section">
         <div className="row g-4">
           <div className="col-12 col-md-6 col-lg-4">
             <div className="card h-100 shadow rounded-4 border-2">
@@ -68,6 +68,6 @@ export default function Specials() {
             </div>
           </div>
         </div>
-      </section>
+      </article>
   );
 }
