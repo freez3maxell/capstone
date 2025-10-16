@@ -30,12 +30,6 @@ export default function Nav() {
                     <li className="nav-item" role="none">
                         <NavLink className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} to="/booking" role="menuitem">Booking</NavLink>
                     </li>
-                    <li className="nav-item" role="none">
-                        <NavLink className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} to="/order-online" role="menuitem">Order Online</NavLink>
-                    </li>
-                    <li className="nav-item" role="none">
-                        <NavLink className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} to="/login" role="menuitem">Login</NavLink>
-                    </li>
                 </ul>
             </div>
         </nav>

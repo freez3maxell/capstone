@@ -59,7 +59,7 @@ const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
                     </h2>
                     <div className="text-secondary fw-semibold">Find a table</div>
                 </div>
-                <form className="row g-2 align-items-center mb-4" onSubmit={handleSubmit} style={{ background: "#FDF4EE", padding: "2rem", borderRadius: "1rem" }}>
+                <form className="row g-2 align-items-center mb-4 rounded-4" onSubmit={handleSubmit}>
                     <div className="col-md-3 mb-3">
                         <label htmlFor="date" className="form-label">Date</label>
                         <div className="input-group">

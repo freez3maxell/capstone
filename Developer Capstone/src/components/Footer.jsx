@@ -17,9 +17,7 @@ export default function Footer() {
                             <li><Link to="/" className="" aria-label="Home">Home</Link></li>
                             <li><Link to="/about" className="" aria-label="About us">About us</Link></li>
                             <li><Link to="/menu" className="" aria-label="Menu">Menu</Link></li>
-                            <li><Link to="/reservations" className="" aria-label="Booking">Booking</Link></li>
-                            <li><Link to="/order-online" className="" aria-label="Order online">Order online</Link></li>
-                            <li><Link to="/login" className="" aria-label="Login">Login</Link></li>
+                            <li><Link to="/booking" className="" aria-label="Booking">Booking</Link></li>
                         </ul>
                     </div>
                     <div className="col-12 col-md-6 col-lg-3 mb-4 mb-lg-0">

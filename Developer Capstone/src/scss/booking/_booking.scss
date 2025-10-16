@@ -1,4 +1,5 @@
-.booking-form {
+.booking-form,
+.main-page {
   background-color: $color-light-yellow;
 
   .card {
@@ -23,5 +24,10 @@
 
   h2 {
     color: $color-onyx;
+  }
+
+  form {
+    background: #FDF4EE;
+    padding: 2rem;
   }
 }

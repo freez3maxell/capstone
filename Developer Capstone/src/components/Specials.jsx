@@ -14,13 +14,17 @@ export default function Specials() {
                     <h3 className="fw-bold mb-0">Greek Salad</h3>
                     <span className="fw-bold text-success fs-5">$12.99</span>
                   </div>
-                  <p className="card-text text-secondary" style={{letterSpacing: "1px"}}>
+                  <p className="card-text text-secondary">
                     The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.
                   </p>
                 </div>
-                <div className="d-flex justify-content-between align-items-center mt-3">
-                  <span className="fw-bold fs-5">Order Delivery</span>
-                  <span className="fs-4"><i className="bi bi-car-front"></i></span>
+                <div className="d-flex justify-content-center align-items-center mt-3">
+                  <button type="button"
+                          className="btn btn-warning fw-bold fs-5 w-100 d-flex align-items-center justify-content-center gap-2"
+                          aria-label="Order Delivery">
+                    Order Delivery
+                    <span className="fs-4"><i className="bi bi-car-front"></i></span>
+                  </button>
                 </div>
               </div>
             </div>
@@ -35,13 +39,17 @@ export default function Specials() {
                     <h3 className="fw-bold mb-0">Bruchetta</h3>
                     <span className="fw-bold text-success fs-5">$5.99</span>
                   </div>
-                  <p className="card-text text-secondary" style={{letterSpacing: "1px"}}>
+                  <p className="card-text text-secondary">
                     Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil.
                   </p>
                 </div>
-                <div className="d-flex justify-content-between align-items-center mt-3">
-                  <span className="fw-bold fs-5">Order Delivery</span>
-                  <span className="fs-4"><i className="bi bi-car-front"></i></span>
+                <div className="d-flex justify-content-center align-items-center mt-3">
+                  <button type="button"
+                          className="btn btn-warning fw-bold fs-5 w-100 d-flex align-items-center justify-content-center gap-2"
+                          aria-label="Order Delivery">
+                    Order Delivery
+                    <span className="fs-4"><i className="bi bi-car-front"></i></span>
+                  </button>
                 </div>
               </div>
             </div>
@@ -56,13 +64,17 @@ export default function Specials() {
                     <h3 className="fw-bold mb-0">Lemon Dessert</h3>
                     <span className="fw-bold text-success fs-5">$5.00</span>
                   </div>
-                  <p className="card-text text-secondary" style={{letterSpacing: "1px"}}>
+                  <p className="card-text text-secondary">
                     This comes straight from grandma's recipe book, every last ingredient has been sourced and is as authentic as can be imagined.
                   </p>
                 </div>
-                <div className="d-flex justify-content-between align-items-center mt-3">
-                  <span className="fw-bold fs-5">Order Delivery</span>
-                  <span className="fs-4"><i className="bi bi-car-front"></i></span>
+                <div className="d-flex justify-content-center align-items-center mt-3">
+                  <button type="button"
+                          className="btn btn-warning fw-bold fs-5 w-100 d-flex align-items-center justify-content-center gap-2"
+                          aria-label="Order Delivery">
+                    Order Delivery
+                    <span className="fs-4"><i className="bi bi-car-front"></i></span>
+                  </button>
                 </div>
               </div>
             </div>

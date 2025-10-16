@@ -5,11 +5,13 @@ import Chicago from './Chicago';
 
 export default function Homepage() {
     return (
-        <section  aria-label="Homepage Section" className="homepage-main container">
-            <Chicago/>
-            <CallToAction/>
-            <Specials/>
-            <CustomersSay/>
-        </section>
+        <main>
+            <section aria-label="Homepage Section" className="homepage-main container">
+                <Chicago/>
+                <CallToAction/>
+                <Specials/>
+                <CustomersSay/>
+            </section>
+        </main>
     );
 }
