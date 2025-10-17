@@ -143,10 +143,8 @@ describe('BookingForm React validation', () => {
   test('submit button is enabled for valid occasion selection', () => {
     render(<BookingForm availableTimes={mockTimes} dispatch={vi.fn()} />);
     const occasionSelect = screen.getByLabelText(/occasion/i);
+    fireEvent.change(occasionSelect, { target: { value: 'Birthday' } });
     const submitBtn = screen.getByRole('button', { name: /find a table/i });
-    occasionSelect.value = 'Birthday';
-    occasionSelect.dispatchEvent(new Event('input', { bubbles: true }));
-    occasionSelect.dispatchEvent(new Event('change', { bubbles: true }));
     expect(submitBtn.disabled).toBe(false);
   });
 });

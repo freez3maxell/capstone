@@ -74,7 +74,7 @@ const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
                                 min={todayStr}
                                 aria-label="On Click"
                             />
-                            <span className="input-group-text" onClick={() => window.resDateInput && window.resDateInput.showPicker()}>
+                            <span className="input-group-text" onClick={() => window.resDateInput && window.resDateDateInput.showPicker()}>
                                 <i className="bi bi-calendar"></i>
                             </span>
                         </div>
@@ -138,7 +138,6 @@ const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
                             type="submit"
                             className="btn btn-warning fw-bold mx-auto mt-4"
                             disabled={!formValid}
-                            aria-label="On Click"
                         >
                             Find a Table
                         </button>
