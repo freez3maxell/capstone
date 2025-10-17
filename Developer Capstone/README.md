@@ -1,12 +1,50 @@
-# React + Vite
+# Setup and Evaluation
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Clone the repository via terminal and navigate to the project files (.\capstone\Developer Capstone\)
+git clone https://github.com/freez3maxell/capstone.git
+cd '.\capstone\Developer Capstone\'
 
-Currently, two official plugins are available:
+# Install Dependencies
+npm install
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Launch app in Browser (vite)
+npm run dev
 
-## Expanding the ESLint configuration
+# Run Tests
+npm test
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# Basic Functionalities
+
+## Overview
+This project is a React application built with Vite, featuring a restaurant booking system and informational pages. It uses Bootstrap for styling and includes several custom components for a modular, maintainable codebase.
+
+## Main Features
+
+- **Homepage**: Displays a hero section, specials, testimonials, and restaurant information.
+- **Navigation**: Responsive navbar for navigating between Home, About, Menu, and Booking pages.
+- **Booking**: Users can select a date, time, number of guests, and occasion to book a table. Form validation and accessibility features are included.
+- **Menu**: Showcases a list of recipes with images and descriptions.
+- **About Us**: Provides information about the restaurant and its story.
+- **Footer**: Responsive footer with navigation links and copyright.
+
+## Accessibility
+- Semantic HTML elements are used throughout.
+- ARIA attributes and proper form labeling improve accessibility for screen readers.
+
+## Styling
+- Bootstrap classes are used for layout and components.
+- Custom SCSS files extend and override Bootstrap styles for a unique look.
+
+## Testing
+- Unit and integration tests are provided for key components, especially the booking form.
+
+## File Structure
+- `src/components/` contains all React components.
+- `src/scss/` contains SCSS partials for styling.
+- `src/utilities/` contains utility functions and API logic.
+
+## Development
+- Hot Module Replacement (HMR) is enabled via Vite for fast development.
+- ESLint is configured for code quality.
+
+---
