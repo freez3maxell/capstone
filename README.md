@@ -2,6 +2,7 @@
 
 # Clone the repository via terminal and navigate to the project files (.\capstone\Developer Capstone\)
 git clone https://github.com/freez3maxell/capstone.git
+
 cd '.\capstone\Developer Capstone\'
 
 # Install Dependencies
