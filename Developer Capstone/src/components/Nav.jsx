@@ -3,9 +3,31 @@ import { NavLink } from "react-router-dom";
 
 export default function Nav() {
     const [collapsed, setCollapsed] = React.useState(true);
+    const navRef = React.useRef(null);
+
+    React.useEffect(() => {
+        function handleClickOutside(event) {
+            if (
+                navRef.current &&
+                !navRef.current.contains(event.target) &&
+                !collapsed
+            ) {
+                setCollapsed(true);
+            }
+        }
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, [collapsed]);
 
     return (
-        <nav className="navbar navbar-expand-lg" aria-label="Main navigation" role="navigation">
+        <nav
+            className="navbar navbar-expand-lg"
+            aria-label="Main navigation"
+            role="navigation"
+            ref={navRef}
+        >
             <button
                 className="navbar-toggler"
                 type="button"

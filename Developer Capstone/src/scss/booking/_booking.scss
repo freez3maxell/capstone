@@ -31,3 +31,16 @@
     padding: 2rem;
   }
 }
+
+@include media-breakpoint-down(lg) {
+  .booking-form,
+  .main-page {
+    .card {
+      margin: 0 !important;
+
+      img {
+        width: 100% !important;
+      }
+    }
+  }
+}
